@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjana N | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:#e2e8f0;
+  scroll-behavior:smooth;
+}
+
+/* Navbar */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#020617;
+  position:sticky;
+  top:0;
+}
+
+nav a{
+  color:#38bdf8;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:100px 20px;
+}
+
+header h1{
+  font-size:42px;
+}
+
+.typing{
+  color:#38bdf8;
+  font-weight:600;
+  margin-top:10px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 18px;
+  background:#38bdf8;
+  color:black;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* Sections */
+section{
+  padding:60px 40px;
+}
+
+h2{
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+/* Cards */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Button */
+button{
+  margin-top:10px;
+  padding:6px 12px;
+  border:none;
+  background:#38bdf8;
+  color:black;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+/* Hidden */
+.hidden{display:none}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+
+/* Animations */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  nav{flex-direction:column}
+  nav div{margin-top:10px}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <h3>Sanjana N</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Hi, I'm Sanjana 👋</h1>
+  <p class="typing"></p>
+  <a href="Sanjana_Resume.pdf" download class="btn">Download Resume</a>
+</header>
+
+<section id="about" class="fade">
+  <h2>About Me</h2>
+  <p>
+I am a detail-oriented and analytical Process Executive with hands-on experience in banking operations, 
+data validation, and compliance-driven workflows. I have worked extensively on financial transaction 
+processing, document verification, and exception handling in high-volume environments.
+
+In my current role, I ensure data accuracy, identify discrepancies, and resolve operational issues while 
+maintaining SLA and quality standards. I am skilled in Microsoft Excel (Pivot Tables, VLOOKUP).
+
+Currently pursuing an MBA, I aim to build a career in Banking Operations, where I can leverage my analytical and problem-solving skills.
+  </p>
+</section>
+
+<section id="skills" class="fade">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Excel (Pivot, VLOOKUP), SQL</div>
+    <div class="card">Data Validation & Analysis</div>
+    <div class="card">Risk & Fraud Analysis</div>
+    <div class="card">Process Improvement</div>
+  </div>
+</section>
+
+<section id="experience" class="fade">
+  <h2>Experience</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Infosys BPM</h3>
+      <p>Process Executive</p>
+      <button onclick="toggle('e1')">View Details</button>
+      <ul id="e1" class="hidden">
+        <li>Validated financial transactions</li>
+        <li>Resolved discrepancies</li>
+        <li>Excel-based data analysis</li>
+        <li>Maintained SLA & audit compliance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>BY and Large</h3>
+      <p>Operations Executive</p>
+      <button onclick="toggle('e2')">View Details</button>
+      <ul id="e2" class="hidden">
+        <li>Managed workflows</li>
+        <li>Vendor coordination</li>
+        <li>Improved operational efficiency</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects" class="fade">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Industrial Training</h3>
+      <p>Process mapping & workflow optimization</p>
+    </div>
+    <div class="card">
+      <h3>Product Capstone</h3>
+      <p>MVP development using user research</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fade">
+  <h2>Contact</h2>
+  <p>Email: sanju7676621@gmail.com</p>
+  <p>Phone: +91 9353793628</p>
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/sanjana-n-87841b269" target="_blank">
+      View Profile
+    </a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Sanjana N | Portfolio</p>
+</footer>
+
+<script>
+
+/* Typing Effect */
+const text=["Process Executive","Banking Operations Analyst"];
+let i=0,j=0,cur="",del=false;
+
+function type(){
+  cur=text[i];
+  document.querySelector(".typing").textContent=cur.substring(0,j);
+
+  if(!del && j++===cur.length){
+    del=true;
+    setTimeout(type,1000);
+    return;
+  }
+
+  if(del && j--===0){
+    del=false;
+    i=(i+1)%text.length;
+  }
+
+  setTimeout(type,del?50:100);
+}
+type();
+
+/* Toggle */
+function toggle(id){
+  document.getElementById(id).classList.toggle("hidden");
+}
+
+/* Scroll Animation */
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting) x.target.classList.add("show");
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
+
+</script>
+
+</body>
+</html>
